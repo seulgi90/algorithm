@@ -24,16 +24,20 @@ public class Main {
         // charAt() 함수를 이용해서 첫 인덱스와 마지막 인덱스부터 비교
         // 입력받은 값의 절반만큼 돌면서 하나는 맨 앞자리부터, 다른 하나는 맨 뒷자리부터 절반까지 같은지 검사
         if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
+        //  System.out.println("첫번째" + str.charAt(i));
+        //  System.out.println("마지막" + str.charAt(str.length() - 1 - i));
           check = false;
         }
       }
 
-      if (check) {
+      if(check) {
         System.out.println("yes");
-          
-      } else {
+      }
+      else {
         System.out.println("no");
       }
     }
+
+    br.close();
   }
 }
