@@ -1,20 +1,26 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
 
   // 직각삼각형 a*a(대각선 길이) = (b*b) * (c*c)
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
 
-    Scanner in = new Scanner(System.in);
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
 
     while(true) {
+      StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
-      int x = in.nextInt();
-      int y = in.nextInt();
-      int z = in.nextInt();
+      int x = Integer.parseInt(st.nextToken());
+      int y = Integer.parseInt(st.nextToken());
+      int z = Integer.parseInt(st.nextToken());
 
-      // 0 입력시 종료
+
+      // 0 0 0 을 입력받으면 종료
       if(x == 0 && y == 0 && z == 0) break;
 
 
@@ -30,10 +36,8 @@ public class Main {
       else {
         System.out.println("wrong");
       }
-
     }
-
-
   }
 }
+
 
